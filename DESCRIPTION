@@ -1,8 +1,11 @@
-Package: CPHdata
-Title: What the Package Does (one line, title case)
+Package: CholeraDataDK
+Title: Loads Cholera Case Data from Denmark mid-1800s
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.2.3)
-License: What license is it under?
+Authors@R: person("Matthew", "Phelps", email = "matthew@sund.ku.dk", role = c("aut", "cre"))
+Description: This package contains incidence data for the cholera outbreaks in
+    mid-1800s Denmark.
+Depends:
+    R (>= 3.2.3)
+License: CC0
 LazyData: true
+RoxygenNote: 5.0.1.9000
