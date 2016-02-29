@@ -36,5 +36,10 @@ cph_street_data$startday.index <-0
 cph_street_data$startday.index <-  cph_street_data$start.date - day0
 
 
+# Order data by quarter, street, then date
+cph_street_data <- cph_street_data[order(cph_street_data$quarter,
+                                         cph_street_data$street,
+                                         cph_street_data$start.date),]
+
 # Save to "data" folder
 devtools::use_data(cph_street_data)
