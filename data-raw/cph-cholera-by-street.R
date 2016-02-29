@@ -25,8 +25,8 @@ cph_street_data$street.index <- cph_street_data$end.date <- NULL
 missing <- cph_street_data[!complete.cases(cph_street_data[, 4:7]), ]
 
 # combine male and female counts
-cph_street_data$sick.total.week <- cph_street_data$male.sick + cph_street_data$female.sick
-cph_street_data$dead.total.week <- cph_street_data$male.dead + cph_street_data$female.dead
+cph_street_data$sick.total <- cph_street_data$male.sick + cph_street_data$female.sick
+cph_street_data$dead.total <- cph_street_data$male.dead + cph_street_data$female.dead
 # one Noerrbro record for male.sick has NA - this causes the 15 female sick on that day not to be
 # included in the total summation
 
@@ -34,8 +34,6 @@ cph_street_data$dead.total.week <- cph_street_data$male.dead + cph_street_data$f
 day0 <- as.Date("1853-06-12")
 cph_street_data$startday.index <-0
 cph_street_data$startday.index <-  cph_street_data$start.date - day0
-
-
 
 
 # Save to "data" folder
