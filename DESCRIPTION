@@ -1,5 +1,5 @@
 Package: CholeraDataDK
-Title: Cholera Case Data from Denmark mid-1800s
+Title: Loads Cholera Case Data from Denmark mid-1800s
 Version: 0.0.0.9000
 Authors@R: person("Matthew", "Phelps", email = "matthew@sund.ku.dk", role = c("aut", "cre"))
 Description: This package contains incidence data for the cholera outbreaks in
@@ -8,7 +8,4 @@ Depends:
     R (>= 3.2.3)
 License: CC0
 LazyData: true
-RoxygenNote: 5.0.1.9000
-Suggests: knitr,
-    rmarkdown
-VignetteBuilder: knitr
+RoxygenNote: 5.0.1
