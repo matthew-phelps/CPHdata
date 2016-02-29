@@ -3,8 +3,13 @@
 #' A dataset of the weekly record of new cholera cases on each street
 #' in Copenhagen in the 1853 epidemic. Dataset also includs hospitals
 #' and streets from outside the city walls (i.e. Noerrebro). Danish letters
-#' have been turned into Engilsh letters: oe, ae, aa. Data was manually entered
-#' by author from source report. Please contact author with any errors or typos
+#' in street names have not been convereted to standard English letters.
+#' Danish letters in quarter names have been turned into Engilsh letters:
+#' oe, ae, aa. Data was manually entered by author from source report.
+#'  Please contact author with any errors or typos. NOTE: it is not currently
+#'  known if hospital counts are included in the street counts and/or if street
+#'  counts are included in the hospital counts. I suspect they are kept separate,
+#'  but this is still being investigated.
 #'
 #'
 #' @format A data frame with 3456 rows and 9 variables:
