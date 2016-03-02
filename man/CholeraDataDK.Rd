@@ -8,7 +8,9 @@
 \description{
 This package contains two datasets:
 \itemize{
-\item \code{\link{cph_street_data}} - Daily cholera morbidity and mortality
+\item \code{\link{cph_citywide_data}} - Daily cholera morbidity and mortality
+\item \code{\link{cph_street_data}} - Weekly morbidity & mortality counts
+at the street level
 \item \code{\link{cph_quarter_data}} - Weekly morbidity & mortality counts
 at the quarter (neighborhood) level
 }
@@ -27,10 +29,11 @@ be available in the original hard copy.
   cholera symptoms to one of the hospitals around the city. At the hospital
   the patients were recorded, and their street address was recorded. It is
   unknown patients like these were recorded at both the street and the
-  hospital (i.e duplicated). For example, it is unkown if a sick person living on
-  Gothersgade and is subsequently sent to a hospital is recorded as a case for
-  both the hospital and Gothersgade. For this reason I have excluded all
-  hospital data from the aggregations to the quarter-level dataset.
+  hospital (i.e duplicated). For example, it is unkown if a sick person
+  living on Gothersgade and is subsequently sent to a hospital is recorded as
+  a case for both the hospital and Gothersgade. For this reason I have
+  excluded all hospital data from the aggregations to the quarter-level
+  dataset, but they are inlcuded in the citywide daily data.
 }
 
 \section{Datasets}{
