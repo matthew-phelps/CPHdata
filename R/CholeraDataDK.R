@@ -1,16 +1,18 @@
 #' Datasets on cholera outbreaks in 19th century Denmark.
 #'
-#' This package contains two datasets:
+#' This package contains three datasets:
 #' \itemize{
 #' \item \code{\link{cph_citywide_data}} - Daily cholera morbidity and mortality
 #' \item \code{\link{cph_street_data}} - Weekly morbidity & mortality counts
 #' at the street level
 #' \item \code{\link{cph_quarter_data}} - Weekly morbidity & mortality counts
-#' at the quarter (neighborhood) level
+#' aggregated to the quarter (neighborhood) level.
 #' }
-#' The data come from a Danish report compiled in 1854 by a local doctor. The
-#' Danish library listing for the report, along with a link to an online version
-#' is available online at
+#' Two datasets, \code{cph_citywide_data} and \code{cph_street_data} are found
+#' in Danish report compiled in 1854 by a local doctor. The
+#' \code{cph_quarter_data} dataset is derived from the \code{cph_street_data}
+#' dataset by aggregation. The Danish library listing for the report, along with
+#' a link to an online version is available online at
 #' \url{https://books.google.dk/books?id=zxA1AAAAIAAJ&redir_esc=y} . The data
 #' were digitized by the author. There were a couple records that were
 #' unreadable due to the way the online version was scanned, but the data should
@@ -31,6 +33,7 @@
 #'
 #' @section Datasets:
 #' \itemize{
+#' \item \code{\link{cph_citywide_data}}
 #' \item \code{\link{cph_street_data}}
 #' \item \code{\link{cph_quarter_data}}
 #' }
