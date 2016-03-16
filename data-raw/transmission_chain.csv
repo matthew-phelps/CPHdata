@@ -1,0 +1,3 @@
+caseID,location,exposure,symptom_onset,outcome_date,outcome,causitive_caseID
+999,Korsoer,1857-09-20,1857-09-22,1857-09-26,recovery,
+888,Korsoer,1853-08-15,1853-08-20,1853-08-21,death,999
