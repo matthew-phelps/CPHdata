@@ -102,6 +102,7 @@ mort_rates_10yr$mort_rates_10yr <- NULL
 
 
 # SAVE
+cph_counts_age <- mort_10yr
 cph_mort_rates <- mort_rates
 cph_mort_rates_10yr <- mort_rates_10yr
 cph_pop1853_10yr <- pop10yr
@@ -110,3 +111,4 @@ devtools::use_data(cph_age_mortality, overwrite = T)
 devtools::use_data(cph_mort_rates, overwrite = T)
 devtools::use_data(cph_pop1853_10yr, overwrite = T)
 devtools::use_data(cph_mort_rates_10yr, overwrite = T)
+devtools::use_data(cph_counts_age, overwrite = T)
