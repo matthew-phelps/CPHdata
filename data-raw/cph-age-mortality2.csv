@@ -1,0 +1,111 @@
+cause,deaths,age_label,start_age_yrs,gender
+cholera,7,1 mo,0.08,m
+cholera,7,1 mo,0.08,f
+cholera,4,2 mo,0.17,m
+cholera,1,2 mo,0.17,f
+cholera,3,3 mo,0.25,m
+cholera,3,4 mo,0.25,f
+cholera,13,4-6 mo,0.33,m
+cholera,11,4-6 mo,0.33,f
+cholera,14,7-9 mo,0.58,m
+cholera,11,7-9 mo,0.58,f
+cholera,7,10-12 mo,0.83,m
+cholera,10,10-12 mo,0.83,f
+cholera,56,2,2,m
+cholera,49,2,2,f
+cholera,38,3,3,m
+cholera,33,3,3,f
+cholera,32,4,4,m
+cholera,22,4,4,f
+cholera,27,5,5,m
+cholera,22,5,5,f
+cholera,47,5-10,5,m
+cholera,55,5-10,5,f
+cholera,29,10-15,10,m
+cholera,31,10-15,10,f
+cholera,28,15-19,15,m
+cholera,32,15-19,15,f
+cholera,93,20-24,20,m
+cholera,46,20-24,20,f
+cholera,110,25-29,25,m
+cholera,96,25-29,25,f
+cholera,150,30-34,30,m
+cholera,153,30-34,30,f
+cholera,218,35-39,35,m
+cholera,183,35-39,35,f
+cholera,201,40-44,40,m
+cholera,161,40-44,40,f
+cholera,203,45-49,45,m
+cholera,191,45-49,45,f
+cholera,201,50-54,50,m
+cholera,234,50-54,50,f
+cholera,189,55-59,55,m
+cholera,191,55-59,55,f
+cholera,126,60-64,60,m
+cholera,195,60-64,60,f
+cholera,89,65-69,65,m
+cholera,191,65-69,65,f
+cholera,80,70-74,70,m
+cholera,157,70-74,70,f
+cholera,42,75-79,75,m
+cholera,118,75-79,75,f
+cholera,11,80-,80,m
+cholera,68,80-,80,f
+cholera,149,unknown,unknown,m
+cholera,193,unknown,unknown,f
+cholera,24,unknown,unknown,unknown
+total_deaths,376,1 mo,0.08,m
+total_deaths,274,1 mo,0.08,f
+total_deaths,48,2 mo,0.17,m
+total_deaths,52,2 mo,0.17,f
+total_deaths,46,3 mo,0.25,m
+total_deaths,38,4 mo,0.25,f
+total_deaths,119,4-6 mo,0.33,m
+total_deaths,93,4-6 mo,0.33,f
+total_deaths,69,7-9 mo,0.58,m
+total_deaths,67,7-9 mo,0.58,f
+total_deaths,63,10-12 mo,0.83,m
+total_deaths,69,10-12 mo,0.83,f
+total_deaths,177,2,2,m
+total_deaths,148,2,2,f
+total_deaths,94,3,3,m
+total_deaths,85,3,3,f
+total_deaths,65,4,4,m
+total_deaths,48,4,4,f
+total_deaths,53,5,5,m
+total_deaths,45,5,5,f
+total_deaths,91,5-10,5,m
+total_deaths,106,5-10,5,f
+total_deaths,48,10-15,10,m
+total_deaths,53,10-15,10,f
+total_deaths,52,15-19,15,m
+total_deaths,71,15-19,15,f
+total_deaths,169,20-24,20,m
+total_deaths,91,20-24,20,f
+total_deaths,163,25-29,25,m
+total_deaths,167,25-29,25,f
+total_deaths,213,30-34,30,m
+total_deaths,203,30-34,30,f
+total_deaths,314,35-39,35,m
+total_deaths,235,35-39,35,f
+total_deaths,291,40-44,40,m
+total_deaths,216,40-44,40,f
+total_deaths,293,45-49,45,m
+total_deaths,247,45-49,45,f
+total_deaths,326,50-54,50,m
+total_deaths,322,50-54,50,f
+total_deaths,298,55-59,55,m
+total_deaths,261,55-59,55,f
+total_deaths,218,60-64,60,m
+total_deaths,266,60-64,60,f
+total_deaths,164,65-69,65,m
+total_deaths,279,65-69,65,f
+total_deaths,161,70-74,70,m
+total_deaths,287,70-74,70,f
+total_deaths,79,75-79,75,m
+total_deaths,202,75-79,75,f
+total_deaths,55,80-,80,m
+total_deaths,157,80-,80,f
+total_deaths,149,unknown,unknown,m
+total_deaths,193,unknown,unknown,f
+total_deaths,24,unknown,unknown,unknown
