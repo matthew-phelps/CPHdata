@@ -121,6 +121,12 @@ mort_rates_10yr$female_mort_rate <- mort_10yr$female_dead / pop10yr$women1853
 mort_rates_10yr$total_mort_rate <- mort_10yr$total_dead / pop10yr$total1853
 mort_rates_10yr$mort_rates_10yr <- NULL
 
+attack_rates <- matrix(data = NA, nrow = nrow(mort_10yr), ncol = 1)
+attack_rates <- data.frame(attack_rates)
+attack_rates$age_range <- pop10yr$age_range
+attack_rates$male_attack_rate <- mort_10yr$male_sick / pop10yr$men1853
+attack_rates$female_attack_rate <- mort_10yr$female_sick / pop10yr$women1853
+attack_rates$attack_rates <- NULL
 
 # SAVE
 cph_counts_age <- mort_10yr
@@ -128,8 +134,10 @@ cph_mort_rates <- mort_rates
 cph_mort_rates_10yr <- mort_rates_10yr
 cph_pop1853_10yr <- pop10yr
 cph_age_mortality <- age_deaths
+cph_age_attack_rate <- attack_rates
 devtools::use_data(cph_age_mortality, overwrite = T)
 devtools::use_data(cph_mort_rates, overwrite = T)
 devtools::use_data(cph_pop1853_10yr, overwrite = T)
 devtools::use_data(cph_mort_rates_10yr, overwrite = T)
 devtools::use_data(cph_counts_age, overwrite = T)
+devtools::use_data(cph_age_attack_rate, overwrite = T)
