@@ -17,7 +17,96 @@ mort_rates$female_mort_rate <- age_mortality$female_dead / cph_pop1853$women1853
 mort_rates$total_mort_rate <- age_mortality$total_dead / cph_pop1853$total1853[1:22]
 mort_rates$mort_rates <- NULL
 
+
+# Collapse to 10yr age groups ---------------------------------------------
+
+age_range <- c("1-9", "10-19", "20-29", "30-39", "40-49",
+               "50-59", "60-69", "70-79", "80+")
+
+age_range <- (matrix(age_range, nrow = length(age_range), ncol = 1))
+pop10yr <- data.frame(age_range)
+mort_10yr <- data.frame(age_range)
+rm(age_range)
+
+
+pop10yr$men1853[1] <- sum(cph_pop1853$men1853[1:5])
+pop10yr$men1853[2] <- sum(cph_pop1853$men1853[6:7])
+pop10yr$men1853[3] <- sum(cph_pop1853$men1853[8:9])
+pop10yr$men1853[4] <- sum(cph_pop1853$men1853[10:11])
+pop10yr$men1853[5] <- sum(cph_pop1853$men1853[12:13])
+pop10yr$men1853[6] <- sum(cph_pop1853$men1853[14:15])
+pop10yr$men1853[7] <- sum(cph_pop1853$men1853[16:17])
+pop10yr$men1853[8] <- sum(cph_pop1853$men1853[18:19])
+pop10yr$men1853[9] <- sum(cph_pop1853$men1853[20:22])
+
+pop10yr$women1853[1] <- sum(cph_pop1853$women1853[1:5])
+pop10yr$women1853[2] <- sum(cph_pop1853$women1853[6:7])
+pop10yr$women1853[3] <- sum(cph_pop1853$women1853[8:9])
+pop10yr$women1853[4] <- sum(cph_pop1853$women1853[10:11])
+pop10yr$women1853[5] <- sum(cph_pop1853$women1853[12:13])
+pop10yr$women1853[6] <- sum(cph_pop1853$women1853[14:15])
+pop10yr$women1853[7] <- sum(cph_pop1853$women1853[16:17])
+pop10yr$women1853[8] <- sum(cph_pop1853$women1853[18:19])
+pop10yr$women1853[9] <- sum(cph_pop1853$women1853[20:22])
+
+pop10yr$total1853[1] <- sum(cph_pop1853$total1853[1:5])
+pop10yr$total1853[2] <- sum(cph_pop1853$total1853[6:7])
+pop10yr$total1853[3] <- sum(cph_pop1853$total1853[8:9])
+pop10yr$total1853[4] <- sum(cph_pop1853$total1853[10:11])
+pop10yr$total1853[5] <- sum(cph_pop1853$total1853[12:13])
+pop10yr$total1853[6] <- sum(cph_pop1853$total1853[14:15])
+pop10yr$total1853[7] <- sum(cph_pop1853$total1853[16:17])
+pop10yr$total1853[8] <- sum(cph_pop1853$total1853[18:19])
+pop10yr$total1853[9] <- sum(cph_pop1853$total1853[20:22])
+
+
+
+mort_10yr$male_dead[1] <- sum(age_mortality$male_dead[1:5])
+mort_10yr$male_dead[2] <- sum(age_mortality$male_dead[6:7])
+mort_10yr$male_dead[3] <- sum(age_mortality$male_dead[8:9])
+mort_10yr$male_dead[4] <- sum(age_mortality$male_dead[10:11])
+mort_10yr$male_dead[5] <- sum(age_mortality$male_dead[12:13])
+mort_10yr$male_dead[6] <- sum(age_mortality$male_dead[14:15])
+mort_10yr$male_dead[7] <- sum(age_mortality$male_dead[16:17])
+mort_10yr$male_dead[8] <- sum(age_mortality$male_dead[18:19])
+mort_10yr$male_dead[9] <- sum(age_mortality$male_dead[20:22])
+
+mort_10yr$female_dead[1] <- sum(age_mortality$female_dead[1:5])
+mort_10yr$female_dead[2] <- sum(age_mortality$female_dead[6:7])
+mort_10yr$female_dead[3] <- sum(age_mortality$female_dead[8:9])
+mort_10yr$female_dead[4] <- sum(age_mortality$female_dead[10:11])
+mort_10yr$female_dead[5] <- sum(age_mortality$female_dead[12:13])
+mort_10yr$female_dead[6] <- sum(age_mortality$female_dead[14:15])
+mort_10yr$female_dead[7] <- sum(age_mortality$female_dead[16:17])
+mort_10yr$female_dead[8] <- sum(age_mortality$female_dead[18:19])
+mort_10yr$female_dead[9] <- sum(age_mortality$female_dead[20:22])
+
+mort_10yr$total_dead[1] <- sum(age_mortality$total_dead[1:5])
+mort_10yr$total_dead[2] <- sum(age_mortality$total_dead[6:7])
+mort_10yr$total_dead[3] <- sum(age_mortality$total_dead[8:9])
+mort_10yr$total_dead[4] <- sum(age_mortality$total_dead[10:11])
+mort_10yr$total_dead[5] <- sum(age_mortality$total_dead[12:13])
+mort_10yr$total_dead[6] <- sum(age_mortality$total_dead[14:15])
+mort_10yr$total_dead[7] <- sum(age_mortality$total_dead[16:17])
+mort_10yr$total_dead[8] <- sum(age_mortality$total_dead[18:19])
+mort_10yr$total_dead[9] <- sum(age_mortality$total_dead[20:22])
+
+
+mort_rates_10yr <- matrix(data = NA, nrow = nrow(mort_10yr), ncol = 1)
+mort_rates_10yr <- data.frame(mort_rates_10yr)
+mort_rates_10yr$age_range <- pop10yr$age_range
+mort_rates_10yr$male_mort_rate <- mort_10yr$male_dead / pop10yr$men1853
+mort_rates_10yr$female_mort_rate <- mort_10yr$female_dead / pop10yr$women1853
+mort_rates_10yr$total_mort_rate <- mort_10yr$total_dead / pop10yr$total1853
+mort_rates_10yr$mort_rates_10yr <- NULL
+
+
 # SAVE
+cph_mort_rates <- mort_rates
+cph_mort_rates_10yr <- mort_rates_10yr
+cph_pop1853_10yr <- pop10yr
 cph_age_mortality <- age_deaths
 devtools::use_data(cph_age_mortality, overwrite = T)
-devtools::use_data(mort_rates, overwrite = T)
+devtools::use_data(cph_mort_rates, overwrite = T)
+devtools::use_data(cph_pop1853_10yr, overwrite = T)
+devtools::use_data(cph_mort_rates_10yr, overwrite = T)
