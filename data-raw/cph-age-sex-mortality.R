@@ -142,6 +142,7 @@ attack_rates$attack_rates <- NULL
 
 # SAVE
 cph_all_mort <- age_deaths
+cph_counts_age2 <- age_deaths2
 cph_counts_age <- mort_10yr
 cph_mort_rates <- mort_rates
 cph_mort_rates_10yr <- mort_rates_10yr
@@ -155,3 +156,4 @@ devtools::use_data(cph_mort_rates_10yr, overwrite = T)
 devtools::use_data(cph_counts_age, overwrite = T)
 devtools::use_data(cph_age_attack_rate, overwrite = T)
 devtools::use_data(cph_all_mort, overwrite = T)
+devtools::use_data(cph_counts_age2, overwrite = T)
