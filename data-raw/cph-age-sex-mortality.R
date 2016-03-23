@@ -1,12 +1,11 @@
 ## Intro
 rm(list = ls())
 
-age_deaths <- read.csv("data-raw\\cph-age-mortality2.csv")
+age_deaths <- read.csv("data-raw\\cph-all-mortality.csv")
 load('data\\cph_pop1853.rda')
 load('data\\age_mortality.rda')
 
 # Replace "." with "-"
-age_deaths$start_age_yrs <- as.numeric(as.character(age_deaths$start_age_yrs))
 # y <- sub("\\.","-", x)# grep and subbing:http://goo.gl/hY1yjM
 # colnames(age_deaths) <- y
 mort_rates <- matrix(data = NA, nrow = nrow(age_mortality), ncol = 1)
@@ -129,6 +128,7 @@ attack_rates$female_attack_rate <- mort_10yr$female_sick / pop10yr$women1853
 attack_rates$attack_rates <- NULL
 
 # SAVE
+cph_all_mort <- age_deaths
 cph_counts_age <- mort_10yr
 cph_mort_rates <- mort_rates
 cph_mort_rates_10yr <- mort_rates_10yr
@@ -141,3 +141,4 @@ devtools::use_data(cph_pop1853_10yr, overwrite = T)
 devtools::use_data(cph_mort_rates_10yr, overwrite = T)
 devtools::use_data(cph_counts_age, overwrite = T)
 devtools::use_data(cph_age_attack_rate, overwrite = T)
+devtools::use_data(cph_all_mort, overwrite = T)
