@@ -1,6 +1,6 @@
 ## Intro
 rm(list = ls())
-
+library(tidyr)
 age_deaths <- read.csv("data-raw\\cph-all-mortality.csv")
 load('data\\cph_pop1853.rda')
 load('data\\age_mortality.rda')
@@ -17,9 +17,12 @@ mort_rates$total_mort_rate <- age_mortality$total_dead / cph_pop1853$total1853[1
 mort_rates$mort_rates <- NULL
 
 
+# Remove unknowns:
+age_deaths <- age_deaths[age_deaths$age_range != "unknown", ]
+
 # Collapse to 10yr age groups ---------------------------------------------
 
-age_range <- c("1-9", "10-19", "20-29", "30-39", "40-49",
+age_range <- c("0-9", "10-19", "20-29", "30-39", "40-49",
                "50-59", "60-69", "70-79", "80+")
 
 age_range <- (matrix(age_range, nrow = length(age_range), ncol = 1))
@@ -118,7 +121,17 @@ mort_rates_10yr$age_range <- pop10yr$age_range
 mort_rates_10yr$male_mort_rate <- mort_10yr$male_dead / pop10yr$men1853
 mort_rates_10yr$female_mort_rate <- mort_10yr$female_dead / pop10yr$women1853
 mort_rates_10yr$total_mort_rate <- mort_10yr$total_dead / pop10yr$total1853
+
 mort_rates_10yr$mort_rates_10yr <- NULL
+
+# Mortality rates based on statistical report - not cholera report
+age_deaths2 <- spread(age_deaths[age_deaths$cause == "cholera", ],
+                      key = gender, value = deaths)
+mort_rates_10yr$male_mort2 <- age_deaths2$m / pop10yr$men1853
+mort_rates_10yr$female_mort2 <- age_deaths2$f / pop10yr$women1853
+tot_mort <- age_deaths2$f + age_deaths2$m
+mort_rates_10yr$total_mort_2 <- tot_mort / pop10yr$total1853
+
 
 attack_rates <- matrix(data = NA, nrow = nrow(mort_10yr), ncol = 1)
 attack_rates <- data.frame(attack_rates)

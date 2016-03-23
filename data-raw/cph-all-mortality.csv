@@ -1,5 +1,5 @@
 cause,age_range,deaths,gender
-cholera,0-10,169,f
+cholera,0-9,169,f
 cholera,10-19,63,f
 cholera,20-29,142,f
 cholera,30-39,336,f
@@ -9,7 +9,7 @@ cholera,60-69,386,f
 cholera,70-79,275,f
 cholera,80+,68,f
 cholera,unknown,193,f
-cholera,0-10,248,m
+cholera,0-9,248,m
 cholera,10-19,57,m
 cholera,20-29,203,m
 cholera,30-39,368,m
@@ -20,7 +20,7 @@ cholera,70-79,122,m
 cholera,80+,11,m
 cholera,unknown,149,m
 cholera,unknown,24,unkown
-total,0-10,1025,f
+total,0-9,1025,f
 total,10-19,124,f
 total,20-29,258,f
 total,30-39,438,f
@@ -30,7 +30,7 @@ total,60-69,545,f
 total,70-79,489,f
 total,80+,157,f
 total,unknown,193,f
-total,0-10,1201,m
+total,0-9,1201,m
 total,10-19,100,m
 total,20-29,332,m
 total,30-39,527,m
