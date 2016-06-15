@@ -43,6 +43,7 @@ for (i in 1:length(loc)){
                            value = with(cases[[i]],
                                         value[match(full[[i]], date)]))
 cases_full[[i]]$value[is.na(cases_full[[i]]$value) ] <- 0
+cases_full[[i]]$day_index <- 1:nrow(cases_full[[i]])
 }
 # Name the locations since this data was lost above
 cases_full[[1]]$location <- "frederikshavn"
