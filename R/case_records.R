@@ -1,6 +1,6 @@
 #' Cholera case records Denmark, 1853.
 #'
-#' A dataset of cholera cases from two small Danish towns of Nykoebing and
+#' A dataset of cholera cases from two small Danish towns of Nykoebing (Felster) and
 #' Frederikshavn in 1853
 #'
 #'
