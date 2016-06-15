@@ -22,18 +22,20 @@
    1 = death & 0 = discharged}
   \item{\code{\bold{event}}}{Vector of dates on which the outcome occured.
     I.e., the date the patient either died or was discharged}
-  \item{\code{\bold{location}}}{Location of hospital - usually the town
-     name}
+  \item{\code{\bold{location}}}{Name of the town}
 }}
 \source{
-{Various handwritten archival records from local doctors}
+{Various handwritten archival records from local doctors. Data entered by Emma Davidson and found by Mads Perner}
 }
 \usage{
 case_records
 }
 \description{
 A dataset of cholera cases from two small Danish towns of Nykoebing (Felster) and
-Frederikshavn in 1853
+Frederikshavn in 1853. This set includes all recorded cholera patients.
+Presumebly they were admitted to some temporary field hospital since
+"discharge" dates are included. The towns would have been too small to have a
+regular hospital however.
 }
 \keyword{datasets}
 
