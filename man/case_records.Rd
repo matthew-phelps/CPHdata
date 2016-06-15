@@ -7,10 +7,11 @@
 \format{A data frame with 254 rows and 8 variables:
 \describe{
   \item{\code{\bold{admission_order}}}{Vector of integer values describing
-  the order in which cases were admitted to hospital }
+  the order in which cases were recorded - but does not seemingly correspond
+  to any real-life value}
   \item{\code{\bold{date_admission}}}{Vector of date values recording the
-  date that the patient was admitted to the hospital}
-  \item{\code{\bold{age}}}{Numeric vector of age of cases at admission}
+  date that the patient was diagnosed}
+  \item{\code{\bold{age}}}{Numeric vector of age of cases}
   \item{\code{\bold{dicharge_date}}}{Vector of dates of discharge from the
   hospital, presumably recovered. NA values mean either patient died or date
   was not recorded}
@@ -31,8 +32,8 @@
 case_records
 }
 \description{
-A dataset of the hospital admission due to cholera during outbreaks around
-Denmark in 1853
+A dataset of cholera cases from two small Danish towns of Nykoebing (Felster) and
+Frederikshavn in 1853
 }
 \keyword{datasets}
 
