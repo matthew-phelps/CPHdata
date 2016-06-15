@@ -9,6 +9,12 @@ case_records$dischage_date <- as.Date(case_records$dischage_date, format = "%d-%
 case_records$death_date <- as.Date(case_records$death_date, format = "%d-%m-%Y")
 case_records$event <- as.Date(case_records$event, format = "%d-%m-%Y")
 
+# Remove final entry for frederikshavn - probably not real case
+# index of removed case:
+d <- case_records$location == "frederikshavn" & case_records$date_admission == "1853-09-04"
+
+case_records <- case_records[!d, ]
+
 
 
 # Fill in missing time-series ---------------------------------------------
@@ -25,7 +31,7 @@ cases_full <- list()
 for (i in 1:length(loc)){
   start[i] <- as.Date(min(loc[[i]]$date_admission))
   end[i] <- max(loc[[i]]$date_admission)
-  full[[i]] <- seq(start[i], by = '1 day', length = (end[i] - start[i]))
+  full[[i]] <- seq(start[i], end[i], by = '1 day')
 
   cases[[i]] <- data.frame(table(loc[[i]]$date_admission))
   cases[[i]]$Var1 <- as.Date(cases[[i]]$Var1)
