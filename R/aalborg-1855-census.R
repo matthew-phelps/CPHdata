@@ -4,7 +4,7 @@
 #' census.
 #'
 #'
-#' @format A data frame with 7772 rows and 2 variables:
+#' @format A data frame with 9187 rows and 2 variables:
 #' \describe{
 #'   \item{gender}{character vector where M = male and F = female}
 #'   \item{age}{Numeric vector of age of individual as recorded in census}

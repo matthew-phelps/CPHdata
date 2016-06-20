@@ -4,7 +4,7 @@
 \name{aalborg_1855_census}
 \alias{aalborg_1855_census}
 \title{Aalborg 1855 census: age & gender of every individual}
-\format{A data frame with 7772 rows and 2 variables:
+\format{A data frame with 9187 rows and 2 variables:
 \describe{
   \item{gender}{character vector where M = male and F = female}
   \item{age}{Numeric vector of age of individual as recorded in census}
