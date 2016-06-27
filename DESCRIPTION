@@ -1,6 +1,6 @@
 Package: CholeraDataDK
 Title: Cholera Case Data from Denmark mid-1800s
-Version: 0.0.1.105
+Version: 0.0.1.106
 Authors@R: person("Matthew", "Phelps", email = "matthew@sund.ku.dk", role = c("aut", "cre"))
 Description: This package contains incidence data for the cholera outbreaks in
     mid-1800s Denmark.
