@@ -1,6 +1,7 @@
 ## Intro
 rm(list = ls())
 library(tidyr)
+library(grouping)
 age_deaths <- read.csv("data-raw\\cph-all-mortality.csv")
 load('data\\cph_pop1853.rda')
 load('data\\age_mortality.rda')
@@ -19,9 +20,8 @@ mort_rates$mort_rates <- NULL
 
 # Remove unknowns:
 age_deaths <- age_deaths[age_deaths$age_range != "unknown", ]
-
+x <- cph_pop1853[1:3, ]
 # Collapse to 10yr age groups ---------------------------------------------
-
 age_range <- c("0-9", "10-19", "20-29", "30-39", "40-49",
                "50-59", "60-69", "70-79", "80+")
 
@@ -29,6 +29,7 @@ age_range <- (matrix(age_range, nrow = length(age_range), ncol = 1))
 pop10yr <- data.frame(age_range)
 mort_10yr <- data.frame(age_range)
 rm(age_range)
+
 
 
 pop10yr$men1853[1] <- sum(cph_pop1853$men1853[1:5])
@@ -152,6 +153,16 @@ mort_10yr$female_all_cause <- age_deaths3$f
 
 
 
+# Under 5 morbidity / mortality -------------------------------------------
+age_mortality$LowerAge <- age_mortality$UpperAge <- NULL
+
+
+group2(cph_pop1853[6:17, ], 2, FUN = "sum", F) # 10 - 69
+group2(cph_pop1853[18:21, ], 1, FUN = "sum", F) # 70 - 89
+
+
+
+
 # SAVE
 cph_all_mort <- age_deaths
 cph_counts_age <- mort_10yr
@@ -160,6 +171,9 @@ cph_mort_rates_10yr <- mort_rates_10yr
 cph_pop1853_10yr <- pop10yr
 cph_age_mortality <- age_deaths
 cph_age_attack_rate <- attack_rates
+cph_age_pop1853_raw <- cph_pop1853
+cph_age_sick_dead_raw <- age_mortality
+
 devtools::use_data(cph_age_mortality, overwrite = T)
 devtools::use_data(cph_mort_rates, overwrite = T)
 devtools::use_data(cph_pop1853_10yr, overwrite = T)
@@ -167,4 +181,5 @@ devtools::use_data(cph_mort_rates_10yr, overwrite = T)
 devtools::use_data(cph_counts_age, overwrite = T)
 devtools::use_data(cph_age_attack_rate, overwrite = T)
 devtools::use_data(cph_all_mort, overwrite = T)
-
+devtools::use_data(cph_age_pop1853_raw, overwrite = T)
+devtools::use_data(cph_age_sick_dead_raw, overwrite = T)
