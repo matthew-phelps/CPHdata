@@ -6,7 +6,7 @@
 #'
 #' @format A data frame with 23 rows and 4 variables:
 #' \describe{
-#'   \item{Date}{the month}
+#'   \item{date}{the month}
 #'   \item{<10}{All cause mortality in people under 10}
 #'   \item{10-25}{All cause mortality in people aged 10-25 }
 #'   \item{26-50}{All cause mortality in people aged 26-50}
