@@ -40,8 +40,23 @@ cph_daily_data$month <- as.integer(cph_daily_data$month)
 korsoer_daily_data$month <- sprintf("%02d", korsoer_daily_data$month) # pad with leading zeros
 korsoer_daily_data$date <- paste(korsoer_daily_data$years, korsoer_daily_data$month, korsoer_daily_data$day, sep = "-")
 korsoer_daily_data$date <- as.Date(korsoer_daily_data$date)
-korsoer_daily_data$city <- "korsoer"
+
 korsoer_daily_data$month <- as.integer(korsoer_daily_data$month)
+
+# Pad missing zero obvservations with 0
+time_length <- nrow(korsoer_daily_data)
+time_min <- min(korsoer_daily_data[, "date"])
+time_max <- max(korsoer_daily_data[, "date"])
+
+# generate a time sequence with 1 month intervals to fill in missing dates
+pad_dates <- seq(time_min, time_max, by = "day")
+pad_dates <- data.frame(date = pad_dates)
+korsoer_daily_data <- merge(korsoer_daily_data, pad_dates, all = T)
+korsoer_daily_data[which(is.na(korsoer_daily_data$cases)), c("cases", "deaths")] <- 0
+korsoer_daily_data$city <- "korsoer"
+
+# Re-generate day-index
+korsoer_daily_data$day_index <- 1:nrow(korsoer_daily_data)
 
 
 brandholm_daily_data$month <- sprintf("%02d", brandholm_daily_data$month) # pad with leading zeros
