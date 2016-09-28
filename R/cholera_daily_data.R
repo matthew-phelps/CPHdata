@@ -9,16 +9,14 @@
 #'
 #' @format A data frame with 273 rows and 11 variables:
 #' \describe{
-#'   \item{years}{Integer vector of year values}
-#'   \item{month}{Integer vector of month values}
-#'   \item{{\bold{day}}}{Integer vector of day of month values}
+#'   \item{{\bold{date}}}{Vector of date values}
 #'   \item{{\bold{day_index}}}{Integer vector of the day number, as indexed
 #'   from the beginig of the epidemic}
 #'   \item{{\bold{cases}}}{Integer vector of Number of people recorded with
 #'   cholera}
 #'   \item{{\bold{deaths}}}{Integer vector recording, of those that were
 #'   sick from cholera, this is the number that died}
-#'   \item{{\bold{date}}}{Vector of date values}
+
 #'   \item{{\bold{city}}}{Name of town or city}
 #'   \item{{\bold{cases_norm}}}{Numeric vector of the normalized case
 #'   incidence rate, per 10,000 people}
