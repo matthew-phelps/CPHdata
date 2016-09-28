@@ -88,6 +88,9 @@ brandholm_daily_data$day_norm <- brandholm_daily_data$day_index / max(brandholm_
 
 cholera_daily_data <- rbind(aalborg_daily_data, brandholm_daily_data, cph_daily_data, korsoer_daily_data)
 
+cholera_daily_data$years <- cholera_daily_data$month <- cholera_daily_data$day <- NULL
+cholera_daily_data <- cholera_daily_data[,c("date",setdiff(names(cholera_daily_data),"date"))]
+
 # SAVE --------------------------------------------------------------------
 devtools::use_data(cholera_daily_data, overwrite = T)
 
