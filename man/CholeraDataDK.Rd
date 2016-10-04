@@ -8,11 +8,18 @@
 \description{
 This package contains three datasets:
 \itemize{
-\item \code{\link{cph_citywide_data}} - Daily cholera morbidity and mortality
-\item \code{\link{cph_street_data}} - Weekly morbidity & mortality counts
-at the street level
-\item \code{\link{cph_quarter_data}} - Weekly morbidity & mortality counts
-aggregated to the quarter (neighborhood) level.
+ \item \code{\link{cph_citywide_data}} {Daily cholera morbidity and mortality}
+ \item \code{\link{cph_street_data}} {Weekly morbidity & mortality counts
+ at the street level}
+ \item \code{\link{cph_quarter_data}} {Weekly morbidity & mortality counts
+ aggregated to the quarter (neighborhood) level.}
+ \item \code{\link{korsoer_age_gender}} {Morbiditiy and mortality from
+ cholera in Korsoer in 1857 broken down by age and gender.
+ aggregated to the quarter (neighborhood) level.}
+ \item \code{\link{korsoer_age_gender}} {Morbiditiy and mortality from
+ cholera in Korsoer in 1857 broken down by age and gender}
+ \item \code{\link{korsoer_age_gender_pop}} {Population of Korsoer broken
+ down by age and gender}
 }
 Two datasets, \code{cph_citywide_data} and \code{cph_street_data} are found
 in Danish report compiled in 1854 by a local doctor. The
