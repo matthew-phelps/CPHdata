@@ -20,7 +20,8 @@ This package contains three datasets:
  cholera in Korsoer in 1857 broken down by age and gender}
  \item \code{\link{korsoer_age_gender_pop}} {Population of Korsoer broken
  down by age and gender}
-}
+\item \code{\link{broad_st}} {Daily mortality counts from the London Broad
+Street outbreak in 1854} }
 Two datasets, \code{cph_citywide_data} and \code{cph_street_data} are found
 in Danish report compiled in 1854 by a local doctor. The
 \code{cph_quarter_data} dataset is derived from the \code{cph_street_data}
