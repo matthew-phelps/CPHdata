@@ -1,4 +1,4 @@
-#' Copenhagen population by age group 1853
+#' Copenhagen mortality by age group 1853
 #'
 #' A dataset of monthly all-cause mortality broken into four age-groups Copenhagen
 #' for the years of 1852 - 1854

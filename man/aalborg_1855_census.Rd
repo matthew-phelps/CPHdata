@@ -20,4 +20,3 @@ A dataset containing the age and gender of every individual recorded in 1850
 census.
 }
 \keyword{datasets}
-

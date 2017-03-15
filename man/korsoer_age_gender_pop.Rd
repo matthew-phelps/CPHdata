@@ -23,4 +23,3 @@ A dataset containing the number of people broken down by
 age and gender in Korsoer in 1853. Data comes from...
 }
 \keyword{datasets}
-

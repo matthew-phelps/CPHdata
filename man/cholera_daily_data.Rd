@@ -38,4 +38,3 @@ in one location. In 1853 cholera was widespread in towns across the nation.
 For all locations daily morbidity and mortality counts were recorded.
 }
 \keyword{datasets}
-

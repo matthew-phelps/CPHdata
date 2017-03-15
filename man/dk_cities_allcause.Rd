@@ -23,4 +23,3 @@ A dataset of monthly all-cause mortality broken into 4 age groups in Danish
 cities (not including Copenhagen) for the years of 1852 - 1854
 }
 \keyword{datasets}
-

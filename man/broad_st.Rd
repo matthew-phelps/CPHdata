@@ -21,4 +21,3 @@ broad_st
 A dataset containing the number of deaths each day as tabulated by John Snow during the Broad Street pump outbreak in Soho, London, 1854
 }
 \keyword{datasets}
-

@@ -26,4 +26,3 @@ A dataset containing cholera admission dates and dates of either death or
 release from hospital from four hospitals within Copenhagen in 1853.
 }
 \keyword{datasets}
-

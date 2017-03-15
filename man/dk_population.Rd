@@ -25,4 +25,3 @@ between the two census data points. Census data comes via
 danishfamilysearch.com
 }
 \keyword{datasets}
-

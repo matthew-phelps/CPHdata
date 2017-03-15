@@ -24,4 +24,3 @@ from the 1850 & 1855 census. The age groupings used are the same groups used
 in both censuses
 }
 \keyword{datasets}
-

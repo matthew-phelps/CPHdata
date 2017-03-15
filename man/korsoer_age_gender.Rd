@@ -31,4 +31,3 @@ A dataset containing the number of cholera cases and deaths broken down by
 age and gender in Aalborg in 1853. Data comes from...
 }
 \keyword{datasets}
-

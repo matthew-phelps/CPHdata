@@ -38,4 +38,3 @@ Presumebly they were admitted to some temporary field hospital since
 regular hospital however.
 }
 \keyword{datasets}
-

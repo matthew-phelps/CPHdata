@@ -26,4 +26,3 @@ A dataset of the total morbidity and mortality counts due to cholera for the
 age groups deliniated by the census
 }
 \keyword{datasets}
-
