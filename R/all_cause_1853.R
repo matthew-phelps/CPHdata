@@ -1,6 +1,7 @@
 #' Copenhagen mortality due to diarrhea, cholera and all-cause in 1853
 #'
-#' A dataset of monthly mortality for 1853 due to cholera, diarrhea, and all cause
+#' A dataset of monthly mortality for 1852 to 1854 due to cholera, diarrhea, and
+#' all cause
 #'
 #'
 #' @format A data frame with 36 rows and 5 variables:
@@ -11,4 +12,4 @@
 #'   \item{all}{Number dead due to all causes, include cholera and diarrhea}
 #'   }
 #' @source {}
-"CPH_allcause"
+"all_cause_1852_1854"
